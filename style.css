@@ -1,0 +1,28 @@
+/* #myText {
+    width: 500px;
+    height: 300px;
+} */
+textarea{
+    resize: none;
+    width: 500px;
+    height: 300px;
+}
+
+#editor {
+    text-align: center;
+    background-color: rgb(99, 168, 196);
+    margin-top: 25px;
+}
+
+#controls{
+    margin-top: 25px;
+}
+
+body{
+    background-color: rgb(99, 168, 196);
+    
+}
+
+p{
+    font-size: 30px;
+}

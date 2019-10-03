@@ -1,0 +1,7 @@
+*******************----Abrir con un navegador web----*********************************
+* 1.-Ingrese una palabra o varias separadas con un espacio entre cada una 	 *
+* 2.-Clic en verificar y el resultado aparecera en el lado derecho		 *
+* Ejemplo de palabras validas para este lenguaje				 *
+* { abb aaaaaabb  bbbbbbabb}							 *
+* basicamente cualquier palabra que contenga solo 'a','b' y termine con 'abb'    *
+**********************************************************************************
