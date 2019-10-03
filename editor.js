@@ -42,8 +42,11 @@ function validarPalabra(palabra) {
                     if (palabra[i] == "'") addToken('COMILLA_SIMPLE', "'");
                     if (palabra[i] == '"') addToken('COMILLA_DOBLE', '"');
                     if (palabra[i] == '<') estado = 20;
+                    if (palabra[i] == '<' && palabra[i + 1] != '>') addToken('OL_MENOR', '<');
                     if (palabra[i] == '>') estado = 21;
+                    if (palabra[i] == '>' && palabra[i + 1] != '>') addToken('OL_MAYOR', '>');
                     if (palabra[i] == '=') estado = 22;
+                    if (palabra[i] == '=' && palabra[i + 1] != '=') addToken('ASIGNACION', '=');
                     // if(palabra[i] !=[':',';','a-z']) lexemas[0].errores.push({"error":palabra[i]});
                     break;
                 case 2:
@@ -64,6 +67,10 @@ function validarPalabra(palabra) {
                     break;
                 case 10:
                     if (palabra[i] == '/') { addToken('COMENTARIO', '//'); estado = 0; }
+                    else { estado = 0; i--; }
+                    break;
+                case 20:
+                    if (palabra[i] == '>') { addToken('OL_DIFERENTE', '<>'); estado = 0; }
                     else { estado = 0; i--; }
                     break;
             }
